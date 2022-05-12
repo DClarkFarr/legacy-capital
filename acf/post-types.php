@@ -33,6 +33,7 @@ function bones_flush_rewrite_rules()
 add_action('init', 'cpt_add_reviews');
 add_action('init', 'cpt_add_employees');
 add_action('init', 'cpt_add_services');
+add_action('init', 'cpt_add_home');
 
 /**
  *  Init texamples 
@@ -202,6 +203,65 @@ function example_field_groups()
                 'type' => 'image',
                 'return_format' => 'id',
             ]
+        ],
+    ]);
+}
+
+function cpt_add_home()
+{
+    $homeId = get_field('page_home', 'options');
+
+    Schema::addFieldGroup([
+        'title' => 'Banner Fields',
+        'location' => [
+            [
+                'page' => [$homeId],
+            ]
+        ],
+        'fields' => [
+            [
+                'label' => 'Banner Image',
+                'type' => 'image',
+                'return_format' => 'id',
+            ],
+            [
+                'label' => 'Banner Title',
+            ],
+            [
+                'label' => 'Banner Lead',
+            ],
+        ],
+    ]);
+
+    Schema::addFieldGroup([
+        'title' => 'Sell Home Fields',
+        'location' => [
+            [
+                'page' => [$homeId],
+            ]
+        ],
+        'fields' => [
+            [
+                'label' => 'Sell Home Title',
+            ],
+            [
+                'label' => 'Sell Home Title 1',
+            ],
+            [
+                'label' => 'Sell Home Text 1',
+            ],
+            [
+                'label' => 'Sell Home Title 2',
+            ],
+            [
+                'label' => 'Sell Home Text 2',
+            ],
+            [
+                'label' => 'Sell Home Title 3',
+            ],
+            [
+                'label' => 'Sell Home Text 3',
+            ],
         ],
     ]);
 }

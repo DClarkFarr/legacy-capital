@@ -1,3 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500,700&display=swap");
+
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
+@import "./menu.less";
+
+@layer components {
+  .btn {
+    @apply inline-block text-center text-white py-2 px-4 rounded;
+  }
+  .btn-primary {
+    @apply bg-primary;
+  }
+  .btn-lg {
+    @apply text-2xl py-4 px-6;
+  }
+
+  .section {
+    @apply py-10;
+  }
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}

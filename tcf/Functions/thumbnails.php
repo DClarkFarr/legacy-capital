@@ -2,6 +2,8 @@
 
 namespace Thumbnails;
 
+use function Queries\get_post_id;
+
 function the_post_thumbnail_title($post_id = null)
 {
     return esc_html(get_post_thumbnail_title($post_id));
