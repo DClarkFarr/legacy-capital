@@ -1,0 +1,3 @@
+#!/bin/bash
+
+$MAMP_PHP_PATH wp-cli.phar "$@"

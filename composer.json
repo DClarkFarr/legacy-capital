@@ -1,0 +1,44 @@
+{
+    "name": "tcf/your-health-restored",
+    "type": "wordpress-theme",
+    "description": "WordPress starter theme with a modern development workflow",
+    "keywords": [
+        "wordpress"
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "TCF\\": "tcf/"
+        }
+    },
+    "require": {
+        "php": "^7.4|^8.0",
+        "roots/acorn": "^2.0"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.6"
+    },
+    "suggest": {
+        "log1x/sage-directives": "A collection of useful Blade directives for WordPress and Sage (^1.0).",
+        "log1x/sage-svg": "A useful SVG directive for inlining SVG's within Blade views (^1.0)."
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "scripts": {
+        "lint": [
+            "phpcs --extensions=php --standard=PSR12 app"
+        ]
+    },
+    "extra": {
+        "acorn": {
+            "providers": [
+                "App\\Providers\\ThemeServiceProvider"
+            ]
+        }
+    }
+}

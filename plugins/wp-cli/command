@@ -1,0 +1,3 @@
+#!/bin/bash
+
+bash wp-cli eval-file "../../tcf/Commands/$1"
