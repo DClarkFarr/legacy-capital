@@ -1,6 +1,6 @@
 <?php
 
-use App\Utils\Schema;
+use TCF\Schema;
 
 acf_add_options_page(array(
     'page_title'     => 'TCF Theme',

@@ -19,7 +19,7 @@ URL: http://themble.com/bones/
 
 // Flush your rewrite rules
 
-use App\Utils\Schema;
+use TCF\Schema;
 
 function bones_flush_rewrite_rules()
 {

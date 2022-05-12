@@ -63,7 +63,7 @@ function breadcrumbs()
     $home      = __('Home'); // text for the 'Home' link
     $homeLink = home_url();
 
-    $a = function ($href = '#', $text) {
+    $a = function ($href = '#', $text = "") {
         return '<a href="' . $href . '">' . $text . '</a>';
     };
     $li = function ($href, $text, $active = false) use ($a) {

@@ -84,7 +84,7 @@ add_theme_support('sage');
  * Custom Plugins
  */
 
-// require_once __DIR__ . "/plugins/acf/acf.php";
+require_once __DIR__ . "/plugins/acf/acf.php";
 // require_once __DIR__ . "/plugins/soil/soil.php";
 // require_once __DIR__ . '/plugins/slim/wp-slim-framework.php';
 
@@ -92,10 +92,10 @@ add_theme_support('sage');
 /**
  * Require TCF Namespaced methods
  */
-// require_once __DIR__ . '/tcf/Functions/autoload.php';
+require_once __DIR__ . '/tcf/Functions/autoload.php';
 
 /**
  * Require TCF helpers
  */
-// require_once __DIR__ . '/acf/options.php';
-// require_once __DIR__ . '/acf/post-types.php';
+require_once __DIR__ . '/acf/options.php';
+require_once __DIR__ . '/acf/post-types.php';

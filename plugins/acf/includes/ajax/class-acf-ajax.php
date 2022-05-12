@@ -73,7 +73,7 @@ class ACF_Ajax {
 	 * @param	mixed $value The data value.
 	 * @return	ACF_Ajax
 	 */
-	function set( $key = '', $value ) {
+	function set( $key = '', $value = '' ) {
 		$this->request[$key] = $value;
 		return $this;
 	}
@@ -225,5 +225,3 @@ class ACF_Ajax {
 }
 
 endif; // class_exists check
-
-?>
