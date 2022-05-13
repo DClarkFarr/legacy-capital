@@ -264,4 +264,47 @@ function cpt_add_home()
             ],
         ],
     ]);
+
+    Schema::addFieldGroup([
+        'title' => 'Homeowners Fields',
+        'location' => [
+            [
+                'page' => [$homeId],
+            ]
+        ],
+        'fields' => [
+            [
+                'label' => 'Homeowners Title',
+            ],
+            [
+                'label' => 'Homeowners Text',
+                'type' => 'wysiwyg'
+            ],
+
+        ],
+    ]);
+
+    Schema::addFieldGroup([
+        'title' => 'About Us',
+        'location' => [
+            [
+                'page' => [$homeId],
+            ]
+        ],
+        'fields' => [
+            [
+                'label' => 'About Us Title',
+            ],
+            [
+                'label' => 'About Us Text',
+                'type' => 'wysiwyg'
+            ],
+            [
+                'label' => 'About Us Image',
+                'type' => 'image',
+                'return_format' => 'id',
+            ],
+
+        ],
+    ]);
 }

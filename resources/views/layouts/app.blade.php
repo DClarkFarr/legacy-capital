@@ -6,6 +6,11 @@
 
 <main id="main" class="main">
     @yield('content')
+
+    <div class="hidden">
+        <!-- put dynamic classes here so tailwind can find them -->
+        <div class="form-control form-group max-w-full py-4 py-5"></div>
+    </div>
 </main>
 
 @hasSection('sidebar')
