@@ -15,13 +15,13 @@
             </p>
 
             <div class="text-center">
-                <button class="btn btn-lg btn-primary rounded-none">
+                <a href="/#sell-your-home" class="btn btn-lg btn-primary rounded-none">
                     SELL YOUR HOME
-                </button>
+                </a>
             </div>
         </div>
 
-        <section class="sell-home section">
+        <section class="sell-home section" id="sell-your-home">
             <div class="container mx-auto">
                 <h2 class="text-center text-4xl lg:text-6xl font-semibold mb-20">
                     <?php the_field('sell_home_title'); ?>
@@ -80,15 +80,15 @@
                                 <?php the_field('homeowners_text'); ?>
                             </div>
 
-                            <div class="btn btn-dark btn-lg text-lg px-12 rounted-none">
+                            <a href="/#about-us" class="btn btn-dark btn-lg text-lg px-12 rounted-none">
                                 About Us
-                            </div>
+                            </a>
                         </div>
                     </div>
                     <div class="lg:w-2/5 2xl:w-1/3 py-6">
                         <div
                             class="max-w-[550px] bg-dark-2 text-white pt-10 px-6 lg:px-14 pb-4 rounded-lg mx-auto -mb-[200px]">
-                            <h3 class="font-bold text-4xl mb-6">
+                            <h3 class="font-bold text-4xl mb-6" id="contact-us">
                                 Contact Us Now
                             </h3>
                             <?php echo do_shortcode('[contact-form-7 id="29" title="Home Page Form"]'); ?>
@@ -98,7 +98,7 @@
             </div>
         </section>
 
-        <section class="section about-us">
+        <section class="section about-us" id="about-us">
             <div class="container pt-20">
                 <div class="lg:flex gap-x-8 items-center">
                     <div class="w-2/4 lg:text-left lg:w-1/2 mx-auto lg:text-right mb-8">
@@ -149,13 +149,13 @@
 
                 </div>
 
-                <div class="lg:flex lg:mx-32 mx-10 mb-6">
+                <div class="lg:flex lg:mx-32 mx-10">
                     <?php 
                     $count = 0;
                     while(have_rows('steps')){ the_row(); $count++;
                         ?>
                     <div
-                        class="step max-w-[350px] lg:max-w-[400] mx-auto lg:w-1/4 shrink-0 mb-8 p-6 border-t border-t-4 <?php echo $count === 1 ? 'border-t-primary' : 'border-t-neutral-200'; ?>">
+                        class="step max-w-[350px] lg:max-w-[400] mx-auto lg:w-1/4 shrink-0 mb-8 lg:mb-0 p-6 border-t border-t-4 <?php echo $count === 1 ? 'border-t-primary' : 'border-t-neutral-200'; ?>">
                         <h4 class="text-xl mb-4">
                             STEP <?php echo $count; ?>
                         </h4>
