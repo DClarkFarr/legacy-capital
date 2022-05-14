@@ -1,55 +1,55 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500,700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500,700&display=swap');
 
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
-@import "./menu.less";
+@import './menu.less';
 
 @layer components {
-  .btn {
-    @apply cursor-pointer inline-block text-center text-white py-2 px-4 rounded disabled:bg-gray-500;
-  }
-  .btn-primary {
-    @apply bg-primary;
-  }
-  .btn-dark {
-    @apply bg-gray-800 hover:bg-gray-900;
-  }
-  .btn-lg {
-    @apply text-2xl py-4 px-6;
-  }
+    .btn {
+        @apply cursor-pointer inline-block text-center text-white py-2 px-4 rounded disabled:bg-gray-500;
+    }
+    .btn-primary {
+        @apply bg-primary;
+    }
+    .btn-dark {
+        @apply bg-gray-800 hover:bg-gray-900;
+    }
+    .btn-lg {
+        @apply text-2xl py-4 px-6;
+    }
 
-  .section {
-    @apply py-20;
-  }
+    .section {
+        @apply py-20;
+    }
 
-  .container {
-    @apply mx-auto px-4;
-  }
+    .container {
+        @apply mx-auto px-4;
+    }
 
-  .form-group {
-    @apply mb-4;
-  }
-  .form-control {
-    @apply px-6 py-4 rounded-lg placeholder:text-gray-600 text-gray-800 max-w-full w-full;
-  }
+    .form-group {
+        @apply mb-4;
+    }
+    .form-control {
+        @apply px-6 py-4 rounded-lg placeholder:text-gray-600 text-gray-800 max-w-full w-full;
+    }
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 .absolute-center-v {
-  top: 50%;
-  transform: translateY(-50%);
+    top: 50%;
+    transform: translateY(-50%);
 }
 .absolute-center-h {
-  left: 50%;
-  transform: translateX(-50%);
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .inset-x-1\/6 {
-  left: 16.666%;
-  right: 16.666%;
+    left: 16.666%;
+    right: 16.666%;
 }
