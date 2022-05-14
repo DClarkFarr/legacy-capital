@@ -70,7 +70,7 @@
         <section class="section bg-primary-soft text-white">
             <div class="container">
                 <div class="lg:flex justify-center gap-x-10">
-                    <div class="lg:w-1/3 py-6">
+                    <div class="lg:w-2/5 xl:w-1/3 py-6">
                         <div class="lg:mr-10 max-w-[500px] mx-auto">
                             <h3 class="font-bold text-4xl mb-6">
                                 <?php the_field('homeowners_title'); ?>
@@ -85,9 +85,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="lg:w-1/3 py-6">
+                    <div class="lg:w-2/5 2xl:w-1/3 py-6">
                         <div
-                            class="max-w-[500px] bg-dark-2 text-white pt-10 px-6 lg:px-14 pb-4 rounded-lg mx-auto -mb-[200px]">
+                            class="max-w-[550px] bg-dark-2 text-white pt-10 px-6 lg:px-14 pb-4 rounded-lg mx-auto -mb-[200px]">
                             <h3 class="font-bold text-4xl mb-6">
                                 Contact Us Now
                             </h3>
@@ -97,18 +97,15 @@
                 </div>
             </div>
         </section>
-        <section class="section">
-            <div class="container h-24"></div>
-        </section>
 
         <section class="section about-us">
-            <div class="container">
+            <div class="container pt-20">
                 <div class="lg:flex gap-x-8 items-center">
-                    <div class="w-1/4 lg:text-left lg:w-1/2 mx-auto lg:text-right">
+                    <div class="w-2/4 lg:text-left lg:w-1/2 mx-auto lg:text-right mb-8">
                         <?php echo Thumbnails\attachment(get_field('about_us_image'), 'large', ['class' => 'img-fluid block ml-auto']); ?>
                     </div>
-                    <div class="w-1/2">
-                        <div class="max-w-[500px]">
+                    <div class="lg:w-1/2 text-center lg:text-left">
+                        <div class="mx-auto max-w-[500px]">
                             <h3 class="text-dark font-normal mb-6 text-5xl">
                                 <?php the_field('about_us_title'); ?>
                             </h3>
@@ -118,6 +115,58 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section cta bg-primary-dark">
+            <div class="container">
+                <div class="p-10 lg:px-20 text-center text-white text-4xl leading-relaxed">
+                    <?php echo nl2br(get_field('cta_text')); ?>
+                </div>
+            </div>
+        </section>
+
+        <section class="section process">
+            <div class="container">
+                <div class="lg:flex items-center lg:mx-32 mx-10 mb-12">
+                    <div class="lg:w-5/12 order-3 mb-8">
+                        <?php echo Thumbnails\attachment(get_field('process_image'), 'large', ['class' => 'mx-auto']); ?>
+                    </div>
+                    <div class="lg:w-1/2">
+                        <div class="lg:pl-10 text-center lg:text-left">
+                            <h2 class="text-dark text-5xl mb-6 font-thin">
+                                <?php the_field('process_title'); ?>
+                            </h2>
+                            <p class="text-light-5 leading-relaxed text-xl">
+                                <?php the_field('process_text'); ?>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="w-1/12">
+
+                    </div>
+
+                </div>
+
+                <div class="lg:flex lg:mx-32 mx-10 mb-6">
+                    <?php 
+                    $count = 0;
+                    while(have_rows('steps')){ the_row(); $count++;
+                        ?>
+                    <div
+                        class="step max-w-[350px] lg:max-w-[400] mx-auto lg:w-1/4 shrink-0 mb-8 p-6 border-t border-t-4 <?php echo $count === 1 ? 'border-t-primary' : 'border-t-neutral-200'; ?>">
+                        <h4 class="text-xl mb-4">
+                            STEP <?php echo $count; ?>
+                        </h4>
+                        <p class="text-sm text-light-5">
+                            <?php the_sub_field('text'); ?>
+                        </p>
+                    </div>
+
+                    <?php
+                    }
+                    ?>
                 </div>
             </div>
         </section>

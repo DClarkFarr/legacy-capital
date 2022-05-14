@@ -126,11 +126,13 @@ Schema::addFieldGroup([
     'fields' => [
         [
             'label' => 'Logo',
-            'type' => 'id',
+            'type' => 'image',
+            'return_format' => 'id',
         ],
         [
             'label' => 'Footer Logo',
-            'type' => 'id',
+            'type' => 'image',
+            'return_format' => 'id',
         ],
         [
             'label' => 'Business Name',

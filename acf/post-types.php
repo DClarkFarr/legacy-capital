@@ -307,4 +307,62 @@ function cpt_add_home()
 
         ],
     ]);
+
+    Schema::addFieldGroup([
+        'title' => 'CTA Fields',
+        'location' => [
+            [
+                'page' => [$homeId]
+            ]
+        ],
+        'fields' => [
+            [
+                'label' => 'Cta Text',
+                'type' => 'textarea',
+            ],
+        ],
+    ]);
+
+    Schema::addFieldGroup([
+        'title' => 'Process Fields',
+        'location' => [
+            [
+                'page' => [$homeId]
+            ]
+        ],
+        'fields' => [
+            [
+                'label' => 'Process Title',
+            ],
+            [
+                'label' => 'Process Text',
+                'type' => 'textarea',
+            ],
+            [
+                'label' => 'Process Image',
+                'type' => 'image',
+                'return_format' => 'id',
+            ],
+        ],
+    ]);
+
+    Schema::addFieldGroup([
+        'title' => 'Process Steps',
+        'location' => [
+            [
+                'page' => [$homeId],
+            ]
+        ],
+        'fields' => [
+            [
+                'label' => 'Steps',
+                'type' => 'repeater',
+                'sub_fields' => [
+                    [
+                        'label' => 'text',
+                    ]
+                ],
+            ]
+        ],
+    ]);
 }
