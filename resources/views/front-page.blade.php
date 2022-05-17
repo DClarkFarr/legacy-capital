@@ -91,7 +91,7 @@
                             <h3 class="font-bold text-4xl mb-6" id="contact-us">
                                 Contact Us Now
                             </h3>
-                            <?php echo do_shortcode('[contact-form-7 id="29" title="Home Page Form"]'); ?>
+                            <?php echo do_shortcode(get_field('form_contact', 'options')); ?>
                         </div>
                     </div>
                 </div>
