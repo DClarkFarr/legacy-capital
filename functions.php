@@ -99,3 +99,10 @@ require_once __DIR__ . '/tcf/Functions/autoload.php';
  */
 require_once __DIR__ . '/acf/options.php';
 require_once __DIR__ . '/acf/post-types.php';
+
+
+add_action('wp_head', 'enqueue_favicon');
+function enqueue_favicon()
+{
+    echo view('sections.favicon');
+}

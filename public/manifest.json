@@ -4,8 +4,14 @@
   "editor.css": "editor.31d6cf.css",
   "editor.js": "editor.5f39da.js",
   "runtime.js": "runtime.194772.js",
+  "images/favicon/android-chrome-512x512.png": "images/favicon/android-chrome-512x512.png",
+  "images/favicon/android-chrome-192x192.png": "images/favicon/android-chrome-192x192.png",
+  "images/favicon/apple-touch-icon.png": "images/favicon/apple-touch-icon.png",
+  "images/favicon/favicon.ico": "images/favicon/favicon.ico",
   "images/sell-home-lines.png": "images/sell-home-lines.png",
   "images/sell-home-2.png": "images/sell-home-2.png",
+  "images/favicon/favicon-32x32.png": "images/favicon/favicon-32x32.png",
   "images/sell-home-3.png": "images/sell-home-3.png",
-  "images/sell-home-1.png": "images/sell-home-1.png"
+  "images/sell-home-1.png": "images/sell-home-1.png",
+  "images/favicon/favicon-16x16.png": "images/favicon/favicon-16x16.png"
 }
