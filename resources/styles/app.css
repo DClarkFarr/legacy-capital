@@ -52,5 +52,5 @@ body {
     right: 16.666%;
 }
 
-@import './menu.scss';
-@import './home.scss';
+@import './menu.less';
+/* @import './home.less'; */
