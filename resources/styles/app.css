@@ -4,6 +4,9 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+@import './home.less';
+@import './menu.less';
+
 @layer components {
     .btn {
         @apply cursor-pointer inline-block text-center text-white py-2 px-4 rounded disabled:bg-gray-500;
@@ -51,6 +54,3 @@ body {
     left: 16.666%;
     right: 16.666%;
 }
-
-@import './menu.less';
-/* @import './home.less'; */

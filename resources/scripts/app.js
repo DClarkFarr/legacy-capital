@@ -472,13 +472,14 @@ const initStepHoverToggle = () => {
         setActiveIndex(0);
     }, 500);
 
-    const [startShowTimer] = debounce((index) => {
+    const [startShowTimer, cancelShowTimer] = debounce((index) => {
         setActiveIndex(index);
     }, 350);
 
     steps.forEach((step, i) => {
         step.addEventListener('mouseleave', (e) => {
             startResetTimer();
+            cancelShowTimer();
         });
         step.addEventListener('mouseenter', (e) => {
             cancelResetTimer();
