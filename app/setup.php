@@ -14,6 +14,8 @@ use function Roots\bundle;
  * @return void
  */
 add_action('wp_enqueue_scripts', function () {
+    wp_enqueue_script('lozad', get_template_directory_uri() . '/resources/scripts/lozad.min.js', [], null, true);
+
     bundle('app')->enqueue();
 }, 100);
 

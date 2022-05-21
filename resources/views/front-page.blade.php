@@ -149,7 +149,7 @@
 
                 </div>
 
-                <div class="lg:flex lg:mx-32 mx-10">
+                <div class="steps lg:flex lg:mx-32 mx-10">
                     <?php 
                     $count = 0;
                     while(have_rows('steps')){ the_row(); $count++;

@@ -2,7 +2,7 @@
     <div class="container mx-auto">
         <div class="lg:flex w-full items-end py-1 text-center lg:text-left">
             <a class="brand max-w-[160px]" href="{{ home_url('/') }}">
-                <?php echo Thumbnails\attachment(get_field('logo', 'options'), 'medium', ['class' => 'img-fluid mx-auto']); ?>
+                <?php echo Thumbnails\attachment(get_field('logo', 'options'), 'medium', ['class' => 'img-fluid mx-auto', 'lazy' => false]); ?>
             </a>
 
             @if (has_nav_menu('primary_navigation'))

@@ -48,7 +48,7 @@ function thumbnail($size = 'original', $attrs = [], $post_id = null)
 function attachment($attachment_id, $size = 'original', $attrs = [])
 {
     $attrs = array_merge([
-        'lazy' => false,
+        'lazy' => true,
         'class' => 'img-fluid',
         'style' => '',
         'title' => get_attachment_title($attachment_id),
@@ -84,7 +84,7 @@ function img($url, $attrs = [])
         if (empty($attrs['class'])) {
             $attrs['class'] = '';
         }
-        $attrs['class'] .= ' lazy';
+        $attrs['class'] .= ' lozad';
 
         unset($attrs['lazy']);
     }
